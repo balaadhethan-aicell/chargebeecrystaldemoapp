@@ -8,7 +8,6 @@ The app preserves the original product thesis:
 - flat outcome pricing under-segments value
 - the recommended next step is a value-weighted hybrid model with included credits and weighted overages
 
-The implementation is now integration-driven rather than demo-theater driven. Real Chargebee reads back the workspace wherever practical, OpenAI is used only for narrative framing, and destructive billing actions stay in dry run by default.
 
 ## What Chargebee Crystal does
 
