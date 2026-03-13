@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 216 26% 97%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --border: 216 20% 86%;
+    --input: 216 20% 90%;
+    --primary: 214 82% 46%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 30% 96%;
+    --secondary-foreground: 222 47% 14%;
+    --muted: 210 26% 95%;
+    --muted-foreground: 215 16% 46%;
+    --accent: 213 42% 93%;
+    --accent-foreground: 222 47% 14%;
+    --destructive: 0 84% 58%;
+    --destructive-foreground: 0 0% 98%;
+    --ring: 214 84% 46%;
+    --chart-1: 214 78% 52%;
+    --chart-2: 199 89% 48%;
+    --chart-3: 217 33% 25%;
+    --chart-4: 156 56% 35%;
+    --chart-5: 32 95% 44%;
+    --radius: 0.95rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+    font-feature-settings: "ss01" on, "cv03" on, "cv11" on;
+  }
+
+  ::selection {
+    background: rgba(37, 99, 235, 0.14);
+  }
+
+  code,
+  pre,
+  kbd,
+  samp {
+    font-family: "IBM Plex Mono", "SFMono-Regular", monospace;
+  }
+}
+
+@layer components {
+  .app-grid {
+    background-color: #f6f8fb;
+  }
+
+  .panel-blur {
+    backdrop-filter: blur(10px);
+  }
+
+  .surface-label {
+    @apply text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500;
+  }
+
+  .surface-note {
+    @apply text-sm leading-6 text-slate-600;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .print-hidden {
+    display: none !important;
+  }
+
+  .print-reset {
+    box-shadow: none !important;
+    border-color: #d4d4d8 !important;
+    background: white !important;
+  }
+}
